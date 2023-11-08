@@ -1,3 +1,4 @@
 body {
   background: var(--grey-900, #121829);
+  padding: 16px 120px;
 }

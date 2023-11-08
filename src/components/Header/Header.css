@@ -1,5 +1,5 @@
 .header {
-  padding:16px 120px;
+  padding-top:16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@
   align-items: center;
   text-decoration: none;
   color: var(--grey-200, #A8AEBF);
-  font-family: Poppins;
+  font-family: inherit;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;

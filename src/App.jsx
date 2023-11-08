@@ -1,5 +1,6 @@
 import './App.css';
 import Button from './components/Button/Button';
+import Films from './components/Films/Films';
 import Header from './components/Header/Header';
 import Headline from './components/Headline/Headline';
 import Input from './components/Input/Input';
@@ -33,14 +34,17 @@ function App() {
 				text = {data.paragraph['text']}
 				fontsize = {data.paragraph['fontsize']}
 			/>
-			<Input
-				placeholder = {data.input.placeholder}
-				inputImage = {data.input.inputImage}
-			/>
-			<Button
-				text = {data.button['text']}
-				onClick = {() => { console.log('Нажали');}}
-			/>
+			<div className='wrapperSearch'>
+				<Input
+					placeholder = {data.input.placeholder}
+					inputImage = {data.input.inputImage}
+				/>
+				<Button
+					text = {data.button['text']}
+					onClick = {() => { console.log('Нажали');}}
+				/>
+			</div>
+			<Films/>
 		</>
 	);
 }
