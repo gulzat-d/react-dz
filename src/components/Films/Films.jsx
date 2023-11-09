@@ -1,5 +1,5 @@
 import CardFilm from '../CardFilm/CardFilm';
-import './Films.css';
+import styles from './Films.module.css';
 
 function Films() {
 
@@ -46,7 +46,7 @@ function Films() {
 		}
 	];
 
-	return <div className='films'>
+	return <div className={styles['films']}>
 	
 		{data.map(el => (
 			<CardFilm

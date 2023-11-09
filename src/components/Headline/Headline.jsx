@@ -1,10 +1,10 @@
-import './Headline.css';
+import styles from './Headline.module.css';
 
 function Headline({ title }) {
 
 	return  (
 		<>
-			<h1 className='headline'>{title}</h1>
+			<h1 className={styles['headline']}>{title}</h1>
 		</>
 	);
 }

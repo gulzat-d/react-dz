@@ -1,4 +1,4 @@
-import './App.css';
+import styles from'./App.module.css';
 import Button from './components/Button/Button';
 import Films from './components/Films/Films';
 import Header from './components/Header/Header';
@@ -34,7 +34,7 @@ function App() {
 				text = {data.paragraph['text']}
 				fontsize = {data.paragraph['fontsize']}
 			/>
-			<div className='wrapperSearch'>
+			<div className={styles['wrapperSearch']}>
 				<Input
 					placeholder = {data.input.placeholder}
 					inputImage = {data.input.inputImage}
