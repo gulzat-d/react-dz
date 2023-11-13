@@ -1,10 +1,10 @@
 import styles from'./Paragraph.module.css';
 
-function Paragraph({ text, fontsize }) {
+function Paragraph({ text }) {
 
 	return  (
 		<>
-			<p className={styles['paragraph']} style={{fontsize}}>{text}</p>
+			<p className={styles.paragraph}>{text}</p>
 		</>
 	);
 }

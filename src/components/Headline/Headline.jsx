@@ -4,7 +4,7 @@ function Headline({ title }) {
 
 	return  (
 		<>
-			<h1 className={styles['headline']}>{title}</h1>
+			<h1 className={styles.headline}>{title}</h1>
 		</>
 	);
 }

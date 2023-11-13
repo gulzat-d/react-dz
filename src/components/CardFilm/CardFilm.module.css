@@ -24,7 +24,7 @@
 	z-index: 1;
 }
 
-.cardFilm__rating-number {
+.cardFilm__ratingNumber {
 	color: var(--warning-500, #FFAD49);
 	font-family: Poppins;
 	font-size: 16px;
@@ -55,7 +55,7 @@
 	align-items: center;
 }
 
-.cardFilm__favorites-button {
+.cardFilm__favoritesButton {
 	color: var(--primary-400, #7B6EF6);
 	font-family: Poppins;
 	font-size: 16px;
