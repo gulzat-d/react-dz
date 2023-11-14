@@ -9,6 +9,7 @@
   background: var(--primary-400, #7B6EF6);
   color: var(--white-100, #FFF);
   font-family: 'Poppins', sans-serif;
+  max-width: 200px;
 }
 
 .button:hover {

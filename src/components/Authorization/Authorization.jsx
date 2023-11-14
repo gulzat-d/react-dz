@@ -1,12 +1,24 @@
-import styles from'./Authorization.module.css';
+import Button from '../Button/Button';
+import Headline from '../Headline/Headline';
+import Input from '../Input/Input';
+import styles from './Authorization.module.css';
 
 function Authorization() {
 
 	return  (
-		<a href="#" className={styles.header__navItem}>
-			<span>Войти</span>
-			<img src="/public/login.svg" alt="Войти" />
-		</a>
+		<>
+			<Headline
+				title={'Вход'}
+			/>
+			<div className={styles.authorization}>
+				<Input
+					placeholder={'Ваше имя'}
+				/>
+				<Button
+					text={'Войти в профиль'}
+				/>
+			</div>
+		</>
 	);
 }
 

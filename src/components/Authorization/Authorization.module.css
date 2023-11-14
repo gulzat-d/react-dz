@@ -1,13 +1,5 @@
-.header__navItem {
-	padding: 12px 16px;
+.authorization {
 	display: flex;
-	gap: 8px;
-	align-items: center;
-	text-decoration: none;
-	color: var(--grey-200, #A8AEBF);
-	font-family: inherit;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 24px;
+	flex-direction: column;
+	gap: 27px;
 }

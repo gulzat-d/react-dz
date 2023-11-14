@@ -1,4 +1,5 @@
 import styles from'./App.module.css';
+import Authorization from './components/Authorization/Authorization';
 import Films from './components/Films/Films';
 import Header from './components/Header/Header';
 import Headline from './components/Headline/Headline';
@@ -13,11 +14,12 @@ function App() {
 			<Headline
 				title = {'Поиск'} 
 			/>
-			<Paragraph className={styles.paragraph}
+			<Paragraph
 				text = {'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.'}
 			/>
 			<Search/>
 			<Films/>
+			<Authorization></Authorization>
 		</>
 	);
 }

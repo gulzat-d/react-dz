@@ -1,5 +1,5 @@
-import Authorization from '../Authorization/Authorization';
 import styles from'./Header.module.css';
+import LoginButton from '../LoginButton/LoginButton';
 
 function Header() {
 
@@ -14,7 +14,7 @@ function Header() {
 					<span>Мои фильмы</span>
 					<span className={styles['ellipse']}>2</span>
 				</a>
-				<Authorization/>
+				<LoginButton/>
 			</div>
 		</div>
 	);
