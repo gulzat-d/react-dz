@@ -1,3 +1,4 @@
+import Authorization from '../Authorization/Authorization';
 import styles from'./Header.module.css';
 
 function Header() {
@@ -13,10 +14,7 @@ function Header() {
 					<span>Мои фильмы</span>
 					<span className={styles['ellipse']}>2</span>
 				</a>
-				<a href="#" className={styles.header__navItem}>
-					<span>Войти</span>
-					<img src="/public/login.svg" alt="Войти" />
-				</a>
+				<Authorization/>
 			</div>
 		</div>
 	);
