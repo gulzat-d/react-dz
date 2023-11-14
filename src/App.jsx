@@ -1,4 +1,3 @@
-import styles from'./App.module.css';
 import Authorization from './components/Authorization/Authorization';
 import Films from './components/Films/Films';
 import Header from './components/Header/Header';

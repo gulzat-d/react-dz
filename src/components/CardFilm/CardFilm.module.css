@@ -26,7 +26,7 @@
 
 .cardFilm__ratingNumber {
 	color: var(--warning-500, #FFAD49);
-	font-family: Poppins;
+	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
@@ -39,7 +39,7 @@
 
 .cardFilm__name {
 	color: var(--grey-50, #EBEEF5);
-	font-family: Poppins;
+	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
@@ -57,7 +57,7 @@
 
 .cardFilm__favoritesButton {
 	color: var(--primary-400, #7B6EF6);
-	font-family: Poppins;
+	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;

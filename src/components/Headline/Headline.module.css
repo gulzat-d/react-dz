@@ -4,5 +4,5 @@ color: var(--grey-50, #EBEEF5);
   font-style: normal;
   font-weight: 600;
   line-height: 80px;
-  font-family: inherit;
+  font-family: 'Poppins', sans-serif;
 }
