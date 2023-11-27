@@ -1,6 +1,7 @@
 
 .input {
   display: flex;
+  color: #FFF;
   width: 360px;
   padding: 24px 45px;
   align-items: center;

@@ -2,11 +2,10 @@ import styles from './LoginButton.module.css';
 
 function LoginButton() {
 
-	return  (
-		<a href="#" className={styles.header__navItem}>
-			<span>Войти</span>
+	return (
+		<button className={styles.header__navItem}>Войти
 			<img src="/public/login.svg" alt="Войти" />
-		</a>
+		</button>
 	);
 }
 

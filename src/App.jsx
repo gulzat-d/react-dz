@@ -7,17 +7,17 @@ import Search from './components/Search/Search';
 
 function App() {
 
-	return  (
+	return (
 		<>
-			<Header/>
+			<Header />
 			<Headline
-				title = {'Поиск'} 
+			// title = {'Поиск'} 
 			/>
 			<Paragraph
-				text = {'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.'}
+				text={'Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.'}
 			/>
-			<Search/>
-			<Films/>
+			<Search />
+			<Films />
 			<Authorization></Authorization>
 		</>
 	);

@@ -4,15 +4,16 @@ import Input from '../Input/Input';
 
 function Search() {
 
-	return  (
+	return (
 		<div className={styles.wrapperSearch}>
 			<Input
-				placeholder = {'Введите название'}
-				inputImage = {'search.svg'}
+				placeholder={'Введите название'}
+				inputImage={'search.svg'}
 			/>
 			<Button
-				text = {'Искать'}
-				onClick = {() => { console.log('Нажали');}}
+				text={'Искать'}
+				className={'button'}
+				onClick={() => { console.log('Нажали'); }}
 			/>
 		</div>
 	);
