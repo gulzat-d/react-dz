@@ -1,7 +1,10 @@
 import styles from './Header.module.css';
 import LoginButton from '../LoginButton/LoginButton';
+import { useContext } from 'react';
+import { UserContext } from '../../context/user.context';
 
 function Header() {
+	const { userName } = useContext(UserContext);
 
 	return (
 		<div className={styles.header}>
@@ -11,7 +14,7 @@ function Header() {
 			<div className={styles.header__nav}>
 				<a href="#" className={styles.header__navItem}>Поиск фильмов</a>
 				<a href="#" className={styles.header__navItem}>
-					<span>Профиль</span>
+					<span>{userName}</span>
 					<img src="/user.svg" alt="Пользователь" />
 				</a>
 				<a href="#" className={styles.header__navItem}>
@@ -23,5 +26,6 @@ function Header() {
 		</div>
 	);
 }
+
 
 export default Header;
