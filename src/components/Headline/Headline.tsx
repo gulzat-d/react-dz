@@ -1,8 +1,9 @@
+import { HeadlineProps } from './Headline.props';
 import styles from './Headline.module.css';
 
-function Headline({ title }) {
+function Headline({ title }: HeadlineProps) {
 
-	return  (
+	return (
 		<>
 			<h1 className={styles.headline}>{title}</h1>
 		</>

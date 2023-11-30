@@ -1,11 +1,12 @@
 import { forwardRef } from 'react';
 import styles from './Input.module.css';
+import { InputProps } from './Input.props';
 
-const Input = forwardRef(function Input({ placeholder, inputImage, name }, ref) {
+const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ inputImage, ...props }, ref) {
 	return (
 		<>
 			{inputImage && <img src={'/public/' + inputImage} alt="Поиск" className={styles.inputImage} />}
-			<input name={name} ref={ref} type='text' className={styles.input} placeholder={placeholder} />
+			<input ref={ref} type='text' className={styles.input} {...props} />
 		</>
 	);
 });

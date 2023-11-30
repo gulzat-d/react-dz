@@ -11,10 +11,9 @@ function Search() {
 				inputImage={'search.svg'}
 			/>
 			<Button
-				text={'Искать'}
 				className={'button'}
 				onClick={() => { console.log('Нажали'); }}
-			/>
+			>{'Искать'}</Button>
 		</div>
 	);
 }
