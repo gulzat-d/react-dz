@@ -5,13 +5,10 @@ import Input from '../Input/Input';
 import styles from './Authorization.module.css';
 import { useLocalStorage } from '../../hooks/use-localStorage.hook';
 import { useContext } from 'react';
-import { UserContext, UserContextProvider } from '../../context/user.context';
 import { IAuthUser } from '../../interfaces/user.interface';
 
 function Authorization() {
 	const [users, saveUsers] = useLocalStorage('users');
-	const { userName } = useContext(UserContext);
-	const [activeUserName, setActiveUserName] = useState(userName);
 
 
 
@@ -20,15 +17,14 @@ function Authorization() {
 		const form = e.target as typeof e.target & HTMLFormElement;
 		const formData = new FormData(form);
 		const newUser = Object.fromEntries(formData).user as string;
-		console.log(newUser);
-
-		setActiveUserName(newUser);
+		// console.log(newUser);
 
 		if (users !== undefined && Array.isArray(users)) {
 			const oldUser = users.find(u => u.name === newUser);
 			if (oldUser) {
-				setActiveUserName(oldUser.name);
+				// console.log(1);
 				const newData: IAuthUser[] = users.map(i => {
+					// console.log(2);
 					if (i.name === newUser) {
 						i.isLogined = true;
 						return i;

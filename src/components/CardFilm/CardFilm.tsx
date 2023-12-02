@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import styles from './CardFilm.module.css';
 import { CardFilmProps } from './CardFilm.props';
 
-function CardFilm({ name, rating, poster }: CardFilmProps) {
+function CardFilm({ name, rating, poster, id }: CardFilmProps) {
 
 	return (
-		<div className={styles.cardFilm}>
+		<Link to={`/movie/${id}`} className={styles.cardFilm}>
 			<div className={styles.cardFilm__rating}>
 				<img src="/public/star.svg" alt="Рейтинг" className="cardFilm__rating-img" />
 				<p className={styles.cardFilm__ratingNumber}>{rating}</p>
@@ -15,7 +16,7 @@ function CardFilm({ name, rating, poster }: CardFilmProps) {
 				<img src="/public/like.svg" alt="Избранное" />
 				<button className={styles.cardFilm__favoritesButton}>В избранное</button>
 			</div>
-		</div>
+		</Link>
 	);
 }
 

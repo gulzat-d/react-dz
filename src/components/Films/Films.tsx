@@ -55,13 +55,14 @@ function Films() {
 	];
 
 	return <div className={styles.films}>
-	
+
 		{data.map(el => (
 			<CardFilm
 				key={el.id}
-				name = {el.name}
-				rating = {el.rating}
-				poster = {el.poster}
+				id={el.id}
+				name={el.name}
+				rating={el.rating}
+				poster={el.poster}
 			/>
 		))}
 	</div>;

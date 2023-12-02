@@ -1,27 +1,17 @@
 import { useState } from 'react';
 import Authorization from './components/Authorization/Authorization';
 import Films from './components/Films/Films';
-import Header from './components/Header/Header';
 import Headline from './components/Headline/Headline';
 import Paragraph from './components/Paragraph/Paragraph';
 import Search from './components/Search/Search';
-import { UserContextProvider } from './context/user.context';
+import { Link, RouterProvider } from 'react-router-dom';
+import { router } from './router/router';
+
 
 function App() {
-
 	return (
-		<UserContextProvider>
-			<div>
-				<Header />
-				<Headline
-					title={'Поиск'}
-				/>
-				<Paragraph>Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.</Paragraph>
-				<Search />
-				<Films />
-				<Authorization></Authorization>
-			</div>
-		</UserContextProvider >
+		<div>
+		</div>
 	);
 }
 
