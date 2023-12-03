@@ -10,7 +10,7 @@ function CardFilm({ name, rating, poster, id }: CardFilmProps) {
 				<img src="/public/star.svg" alt="Рейтинг" className="cardFilm__rating-img" />
 				<p className={styles.cardFilm__ratingNumber}>{rating}</p>
 			</div>
-			<img src={'/public/films/' + poster} alt={name} className={styles.cardFilm__poster} />
+			<img src={poster} alt={name} className={styles.cardFilm__poster} />
 			<h3 className={styles.cardFilm__name}>{name}</h3>
 			<div className={styles.cardFilm__favorites}>
 				<img src="/public/like.svg" alt="Избранное" />

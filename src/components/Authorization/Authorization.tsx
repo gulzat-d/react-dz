@@ -6,9 +6,13 @@ import styles from './Authorization.module.css';
 import { useLocalStorage } from '../../hooks/use-localStorage.hook';
 import { useContext } from 'react';
 import { IAuthUser } from '../../interfaces/user.interface';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../store/store';
+import { userActions } from '../../store/user.slice';
 
 function Authorization() {
-	const [users, saveUsers] = useLocalStorage('users');
+	// const [users, saveUsers] = useLocalStorage('users');
+	// const dispatch = useDispatch<AppDispatch>();
 
 
 
@@ -17,32 +21,33 @@ function Authorization() {
 		const form = e.target as typeof e.target & HTMLFormElement;
 		const formData = new FormData(form);
 		const newUser = Object.fromEntries(formData).user as string;
-		// console.log(newUser);
+		// dispatch(userActions.addName(newUser));
+		console.log(newUser);
 
-		if (users !== undefined && Array.isArray(users)) {
-			const oldUser = users.find(u => u.name === newUser);
-			if (oldUser) {
-				// console.log(1);
-				const newData: IAuthUser[] = users.map(i => {
-					// console.log(2);
-					if (i.name === newUser) {
-						i.isLogined = true;
-						return i;
-					} else {
-						i.isLogined = false;
-						return i;
-					}
-				});
-				saveUsers(newData);
-			} else {
-				const newArray: IAuthUser[] = users.map(i => {
-					i.isLogined = false;
-					return i;
-				});
-				newArray.push({ 'name': newUser, 'isLogined': true });
-				saveUsers(newArray);
-			}
-		}
+		// if (users !== undefined && Array.isArray(users)) {
+		// 	const oldUser = users.find(u => u.name === newUser);
+		// 	if (oldUser) {
+		// 		// console.log(1);
+		// 		const newData: IAuthUser[] = users.map(i => {
+		// 			// console.log(2);
+		// 			if (i.name === newUser) {
+		// 				i.isLogined = true;
+		// 				return i;
+		// 			} else {
+		// 				i.isLogined = false;
+		// 				return i;
+		// 			}
+		// 		});
+		// 		saveUsers(newData);
+		// 	} else {
+		// 		const newArray: IAuthUser[] = users.map(i => {
+		// 			i.isLogined = false;
+		// 			return i;
+		// 		});
+		// 		newArray.push({ 'name': newUser, 'isLogined': true });
+		// 		saveUsers(newArray);
+		// 	}
+		// }
 	};
 
 	return (
