@@ -1,9 +1,9 @@
-.wrapperSearch {
-	display: flex;
+/* .movies {
+	display: grid;
 	gap: 8px;
-}
+} */
 
-.filmList {
+.movies {
 	margin-top: 50px;
 	display: grid;
 	grid-template-columns: repeat(4, 20vw);

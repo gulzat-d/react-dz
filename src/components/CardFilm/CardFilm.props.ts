@@ -1,6 +1,6 @@
 export interface CardFilmProps {
 	name: string;
-	rating: number;
+	rating: string;
 	poster: string;
-	id: number;
+	id: string;
 }

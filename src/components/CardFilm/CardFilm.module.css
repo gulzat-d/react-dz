@@ -8,7 +8,7 @@
 	backdrop-filter: blur(40px);
 }
 
-.cardFilm__rating{
+.rating{
 	width: 49px;
 	height: 24px;
 	position: absolute;
@@ -24,7 +24,7 @@
 	z-index: 1;
 }
 
-.cardFilm__ratingNumber {
+.ratingNumber {
 	color: var(--warning-500, #FFAD49);
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
@@ -33,11 +33,12 @@
 	line-height: 24px;
 }
 
-.cardFilm__poster {
+.poster {
 	position: relative;
+	object-fit: contain
 }
 
-.cardFilm__name {
+.name {
 	color: var(--grey-50, #EBEEF5);
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
@@ -49,13 +50,14 @@
 	padding-left: 8px;
 }
 
-.cardFilm__favorites {
+.favorites {
 	padding-left: 8px;
 	display: flex;
 	align-items: center;
 }
 
-.cardFilm__favoritesButton {
+.favoritesButton {
+	cursor: pointer;
 	color: var(--primary-400, #7B6EF6);
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
@@ -67,6 +69,6 @@
 	border: none;
 }
 
-.cardFilm__favorites-like {
+.favorites-like {
 	background: inherit;
 }

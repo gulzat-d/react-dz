@@ -6,7 +6,7 @@ import Headline from '../Headline/Headline';
 import { Outlet } from 'react-router-dom';
 import { JWT, PREFIX } from '../../helpers/API';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { MouseEvent, useEffect, useState } from 'react';
 import CardFilm from '../CardFilm/CardFilm';
 import { SearchResult } from '../../interfaces/searchResult.interface';
 
@@ -35,7 +35,7 @@ function Search() {
 		}
 	}
 
-	const formSubmit = async (e) => {
+	const formSubmit = async (e: MouseEvent) => {
 		e.preventDefault();
 		const form = e.target as typeof e.target & HTMLFormElement;
 		const formData = new FormData(form);
@@ -59,14 +59,15 @@ function Search() {
 				<Button
 					className={'button'}
 					onClick={getFilm}
-				>{'Искать'}</Button>
+				>{'Искать'}
+				</Button>
 			</form>
 			<div className={styles.filmList}>
 				{movies.map(m => (
 					<CardFilm
 						key={m.id}
 						name={m.titleText.text}
-						rating={m.id}
+						rating={m.id[8]}
 						poster={m.primaryImage.url}
 						id={m.id}
 					/>
