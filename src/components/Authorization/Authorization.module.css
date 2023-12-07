@@ -1,0 +1,9 @@
+.authorization {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+}
+
+.error {
+	border: 1px solid red;
+}

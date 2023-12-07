@@ -1,0 +1,142 @@
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
+	margin-top: 70px;
+	width: 70vw;
+	justify-content: center;
+}
+.imageWrapper {
+	width: 70vw;
+	height: 720px;
+}
+.image{
+	border-radius: 24px;
+	width: 100%;
+	height: 100%;
+	object-fit: contain
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	color: #8E95A9;
+	border-radius: 24px;
+	background: rgba(32, 40, 62, 0.80);
+	backdrop-filter: blur(12px);
+}
+
+
+.description {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	color: #8E95A9;
+}
+
+.filmInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+}
+
+.film {
+	display: flex;
+	gap: 80px;
+}
+
+.item {
+	color: #767E94;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	text-decoration: none;
+}
+
+.info {
+	font-size: 20px;
+	color: #C3C8D4;
+}
+
+.buttons {
+	display: flex;
+}
+
+.filmName {
+	color: #EBEEF5;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 40px;
+}
+
+.rating {
+	width: 49px;
+	height: 24px;
+	padding: 4px 8px;
+	margin: 8px;
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.65);
+	backdrop-filter: blur(4px);
+}
+
+.ratingNumber {
+	color: #FFAD49;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.favorites {
+	padding-left: 8px;
+	display: flex;
+	align-items: center;
+}
+
+.favoritesButton {
+	cursor: pointer;
+	color: #7B6EF6;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+	background: inherit;
+	border: none;
+}
+
+.indent {
+	padding: 14px 14px;
+}
+
+.review {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.reviewTitle {
+color:  #C3C8D4;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 32px;
+}
+
+.text {
+	color:#8E95A9;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 32px;
+}

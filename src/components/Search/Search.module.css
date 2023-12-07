@@ -1,0 +1,12 @@
+.wrapperSearch {
+	display: flex;
+	gap: 8px;
+}
+
+.filmList {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(4, 20vw);
+	row-gap: 16px;
+	column-gap: 24px;
+}

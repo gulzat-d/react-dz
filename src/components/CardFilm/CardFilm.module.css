@@ -1,0 +1,74 @@
+.cardFilm {
+	padding: 8px 8px 16px 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	border-radius: 12px;
+	background: rgba(32, 40, 62, 0.80);
+	backdrop-filter: blur(40px);
+}
+
+.rating{
+	width: 49px;
+	height: 24px;
+	position: absolute;
+	padding: 4px 8px;
+	margin: 8px;
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	background: var(--black-65, rgba(0, 0, 0, 0.65));
+	backdrop-filter: blur(4px);
+	z-index: 1;
+}
+
+.ratingNumber {
+	color: var(--warning-500, #FFAD49);
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.poster {
+	position: relative;
+	object-fit: contain
+}
+
+.name {
+	color: var(--grey-50, #EBEEF5);
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0.32px;
+	margin: 0;
+	padding-left: 8px;
+}
+
+.favorites {
+	padding-left: 8px;
+	display: flex;
+	align-items: center;
+}
+
+.favoritesButton {
+	cursor: pointer;
+	color: var(--primary-400, #7B6EF6);
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0.32px;
+	background: inherit;
+	border: none;
+}
+
+.favorites-like {
+	background: inherit;
+}

@@ -1,0 +1,12 @@
+/* .movies {
+	display: grid;
+	gap: 8px;
+} */
+
+.movies {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(4, 20vw);
+	row-gap: 16px;
+	column-gap: 24px;
+}
