@@ -1,10 +1,8 @@
 import styles from './Favorites.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import CardFilm from '../CardFilm/CardFilm';
-import Films from '../Films/Films';
 import Headline from '../Headline/Headline';
 import { AppDispatch, RootState } from '../../store/store';
-import { favoritesActions } from '../../store/favorites.slice';
 import axios from 'axios';
 import { PREFIX } from '../../helpers/API';
 import { useEffect, useState } from 'react';
@@ -21,12 +19,10 @@ export function Favorites() {
 		}
 		return name;
 	})
-	// console.log(state);
 
 	const favoritesState = useSelector((s: RootState) => {
 		return s.favorites;
 	})
-	// console.log(favoritesState);
 
 	const elements = favoritesState.find(u => u.nameUser === state).movies;
 
@@ -63,6 +59,5 @@ export function Favorites() {
 				/>
 			))}
 		</div>
-		{/* <Films /> */}
 	</div>)
 }

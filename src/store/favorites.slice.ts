@@ -53,14 +53,6 @@ export const favoritesSlice = createSlice({
 			}
 
 		},
-		// getMovies: (state, action: PayloadAction<string>) => {
-		// 	// console.log(state[0]);
-		// 	const movies = state.find(u => {
-		// 		console.log(`цикл ${u}`);
-		// 		return u.nameUser === action.payload
-		// 	});
-		// 	return movies.movies;
-		// },
 		changeUser: (state, action: PayloadAction<string>) => {
 			state.nameUser = action.payload.username;
 		}

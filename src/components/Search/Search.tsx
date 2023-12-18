@@ -4,9 +4,8 @@ import Input from '../Input/Input';
 import Paragraph from '../Paragraph/Paragraph';
 import Headline from '../Headline/Headline';
 import { Outlet } from 'react-router-dom';
-import { JWT, PREFIX } from '../../helpers/API';
 import axios from 'axios';
-import { MouseEvent, useEffect, useState } from 'react';
+import { MouseEvent, MouseEventHandler, useEffect, useState } from 'react';
 import CardFilm from '../CardFilm/CardFilm';
 import { SearchResult } from '../../interfaces/searchResult.interface';
 
@@ -16,7 +15,6 @@ function Search() {
 	const getFilm = async (key: string) => {
 		const options = {
 			method: 'GET',
-			// url: `https://moviesdatabase.p.rapidapi.com/titles/search/keyword/love`,
 			url: `https://moviesdatabase.p.rapidapi.com/titles/search/keyword/${key}`,
 			headers: {
 				'X-RapidAPI-Key': '6d0dc55e0emsh08bd4ba4945fa55p1dd689jsn808754589baf',
@@ -25,7 +23,6 @@ function Search() {
 		};
 		try {
 			const response = await axios.request(options);
-			// console.log(response.data);
 			const newData = response.data.results.filter(i => {
 				return i.id != null && i.primaryImage != null && i.titleText != null
 			})

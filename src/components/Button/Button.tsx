@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import styles from './Button.module.css';
 import { ButtonProps } from './Button.props';
 
