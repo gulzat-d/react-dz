@@ -1,14 +1,12 @@
-import { Link } from 'react-router-dom';
 import styles from './LoginButton.module.css';
+import { LoginButtonProps } from './LoginButton.props';
 
-function LoginButton() {
+function LoginButton({ children, ...props }: LoginButtonProps) {
 
 	return (
-		<Link to='/login' className={styles.link}>
-			<button className={styles.header__navItem}>Войти
-				<img src="/public/login.svg" alt="Войти" />
-			</button>
-		</Link>
+		<button className={styles.header__navItem} {...props}>{children}
+			<img src="/public/login.svg" alt="Авторизация" />
+		</button>
 	);
 }
 

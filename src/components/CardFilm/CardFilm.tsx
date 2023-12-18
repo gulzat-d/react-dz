@@ -2,13 +2,15 @@ import { Link } from 'react-router-dom';
 import styles from './CardFilm.module.css';
 import { CardFilmProps } from './CardFilm.props';
 import { useDispatch, useSelector } from 'react-redux';
-import { MouseEvent } from 'react';
+import { MouseEvent, useEffect, useState } from 'react';
 import { AppDispatch, RootState } from '../../store/store';
 import { favoritesActions } from '../../store/favorites.slice';
 
 function CardFilm({ name, rating, poster, id }: CardFilmProps) {
 	const dispatch = useDispatch<AppDispatch>();
 	const userName = useSelector((s: RootState) => s.user.find(i => i.isLogined === true));
+	const movies = useSelector((s: RootState) => s.favorites.find(i => i.nameUser == userName.name)).movies;
+
 
 	const toggle = (e: MouseEvent) => {
 		e.preventDefault();
@@ -16,6 +18,8 @@ function CardFilm({ name, rating, poster, id }: CardFilmProps) {
 		dispatch(favoritesActions.add({ username, id }));
 		dispatch(favoritesActions.changeUser(userName.name));
 	};
+
+	const valueButton = movies.find(i => i === id) ? 'В избранном' : 'В избранное';
 
 	return (
 		<Link to={`/movie/${id}`} className={styles.cardFilm}>
@@ -35,7 +39,7 @@ function CardFilm({ name, rating, poster, id }: CardFilmProps) {
 					onClick={toggle}
 					className={styles.favoritesButton}
 				>
-					В избранное
+					{valueButton}
 				</button>
 			</div>
 		</Link>

@@ -10,6 +10,7 @@
   color: var(--white-100, #FFF);
   font-family: 'Poppins', sans-serif;
   max-width: 200px;
+  cursor: pointer;
 }
 
 .button:hover {

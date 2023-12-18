@@ -15,12 +15,6 @@ export interface UserState {
 const initialState: UserState = loadState<UserState>(USERNAME_PERSISTENT_STATE) ?? {
 	userList: []
 }
-// {
-// 	name: null,
-// 	isLogined: false,
-// ...loadState(USERNAME_PERSISTENT_STATE)?.filter(user => user.isLogined === true)
-// }	
-
 export const userSlice = createSlice({
 	name: 'user',
 	initialState,
@@ -40,6 +34,12 @@ export const userSlice = createSlice({
 				}
 				return i;
 			});
+		},
+		logout: (state) => {
+			state.map(i => {
+				i.isLogined = false;
+				return i;
+			})
 		}
 	}
 });
