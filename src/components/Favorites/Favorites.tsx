@@ -24,7 +24,7 @@ export function Favorites() {
 		return s.favorites;
 	})
 
-	const elements = favoritesState.find(u => u.nameUser === state).movies;
+	const elements = favoritesState.find(u => u.nameUser === state);
 
 	const getElements = async (id: string) => {
 		const { data } = await axios.get(`${PREFIX}/${id}`, {
@@ -37,9 +37,13 @@ export function Favorites() {
 	}
 
 	const loadAllElements = async () => {
-		const res = await Promise.all(elements.map(i => getElements(i)));
-		const newData = res.map(i => { return { ...i.results } });
-		setFavoritesMovies(newData);
+		try {
+			const res = await Promise.all(elements.movies.map(i => getElements(i)));
+			const newData = res.map(i => { return { ...i.results } });
+			setFavoritesMovies(newData);
+		} catch (e) {
+			throw new Error('Не удалось загрузить данные');
+		}
 	}
 
 	useEffect(() => {
