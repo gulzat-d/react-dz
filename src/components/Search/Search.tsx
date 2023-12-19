@@ -5,7 +5,7 @@ import Paragraph from '../Paragraph/Paragraph';
 import Headline from '../Headline/Headline';
 import { Outlet } from 'react-router-dom';
 import axios from 'axios';
-import { MouseEvent, MouseEventHandler, useEffect, useState } from 'react';
+import { MouseEvent, useState } from 'react';
 import CardFilm from '../CardFilm/CardFilm';
 import { SearchResult } from '../../interfaces/searchResult.interface';
 
